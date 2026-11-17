@@ -1,4 +1,5 @@
 #pragma once
+//https://github.com/Hinakomufu/mufu_lib/blob/main/lib/monoid/affine_min_max(lazy).hpp
 #include <bits/stdc++.h>
 using namespace std;
 
