@@ -1,4 +1,5 @@
 #pragma once
+//https://github.com/Hinakomufu/mufu_lib/blob/main/lib/number_type/longint.hpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -38,6 +39,7 @@ struct longint{
         operator __int128_t() const{ return v; }
         operator double() const{ return static_cast<double>(v); }
         operator long double() const{ return static_cast<long double>(v); }
+        explicit operator bool() const{ return v!=0; }
 
         string to_string() const{
             if(v==0) return "0";
@@ -327,5 +329,6 @@ inline longint sqrt(longint const&a){ return a.l_sqrt(); }
 inline longint floor_i_root(longint const&n,int const&i){ return longint::l_floor_i_root(n,i); }
 inline longint gcd(longint const&a,longint const&b){ return longint::l_gcd(a,b); }
 inline longint lcm(longint const&a,longint const&b){ return longint::l_lcm(a,b); }
+using lint=longint;
 
 
